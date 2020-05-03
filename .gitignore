@@ -1,0 +1,8 @@
+.DS_Store
+**/.DS_Store
+**/*.DS_Store
+TalkingHandsApp.xcodeproj/xcuserdata/
+TalkingHandsApp.xcodeproj/xuserdata/*
+TalkingHandsApp.xcworkspace/xcuserdata/
+TalkingHandsApp.xcworkspace/xuserdata/*
+Pods/Pods.xcodeproj/xcuserdata/*
