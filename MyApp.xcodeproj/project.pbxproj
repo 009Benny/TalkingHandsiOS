@@ -59,7 +59,7 @@
 		17D223F5245DFF6800373004 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		17D223F9245E090A00373004 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		17D223FA245E090A00373004 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		17D223FD245E090A00373004 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		17D223FD245E090A00373004 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		17D223FE245E090A00373004 /* ExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
 		17D22400245E090A00373004 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		17D22401245E090A00373004 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -166,8 +166,8 @@
 		17D223F8245E090A00373004 /* RegisterViewController */ = {
 			isa = PBXGroup;
 			children = (
-				17D223F9245E090A00373004 /* RegisterViewController.xib */,
 				17D223FA245E090A00373004 /* RegisterViewController.swift */,
+				17D223F9245E090A00373004 /* RegisterViewController.xib */,
 			);
 			path = RegisterViewController;
 			sourceTree = "<group>";

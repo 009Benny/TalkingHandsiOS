@@ -14,6 +14,7 @@ class ItemTemaCollectionVeiwCell: UICollectionViewCell {
     @IBOutlet weak var lblTitle: UILabel?
     @IBOutlet weak var swModule: UISwitch?
     var item:MenuItem?
+    var delegate:temaDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,6 +36,9 @@ class ItemTemaCollectionVeiwCell: UICollectionViewCell {
     }
     
     @IBAction func valueChanged(_ sender: Any) {
-        print("Change")
+        if self.item?.id ?? 0 > 0{
+            self.delegate?.updateUser(id: self.item!.id!, activate: self.swModule!.isOn)
+        }
+        
     }
 }

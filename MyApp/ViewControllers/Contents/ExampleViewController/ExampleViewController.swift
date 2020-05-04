@@ -13,6 +13,7 @@ class ExampleViewController: UIViewController, YTPlayerViewDelegate {
     @IBOutlet weak var viewYoutube: UIView?
     var ytPlayer:YTPlayerView?
     var youtubeID:String?
+    var delegate:ViewControllerDelegate?
     
     
     override func viewDidLoad() {
@@ -47,7 +48,14 @@ class ExampleViewController: UIViewController, YTPlayerViewDelegate {
     @IBAction func btnBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
+    @IBAction func btnCamera(_ sender: Any) {
+//        self.delegate?.showCamera()
+        let controller = CameraViewController(nibName: "CameraViewController", bundle: nil)
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: true, completion: nil)
+    }
+    
     //MARK: - VideoYouTubeDelegate
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
         print("ready")

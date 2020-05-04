@@ -11,6 +11,7 @@ import UIKit
 protocol ViewControllerDelegate {
     func showMenu()
     func showContent(withItem item:MenuItem)
+    func showCamera()
 }
 
 class ViewController: UIViewController, ViewControllerDelegate{
@@ -19,7 +20,7 @@ class ViewController: UIViewController, ViewControllerDelegate{
     @IBOutlet weak var viewLogo: UIView?
     @IBOutlet weak var btnLogIn: UIButton?
     @IBOutlet weak var btnRegister: UIButton?
-    
+    let imagePicker:UIImagePickerController = UIImagePickerController()
     var actualController:UIViewController?
     var data:NSArray?
     
@@ -59,6 +60,24 @@ class ViewController: UIViewController, ViewControllerDelegate{
                 }
             }
         }
+    }
+    
+    @IBAction func btnCamaraACtion(_ sender: Any) {
+        self.showCamera()
+    }
+    
+    func showCamera(){
+        let controller = CameraViewController(nibName: "CameraViewController", bundle: nil)
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: true, completion: nil)
+        //        if UIImagePickerController.isSourceTypeAvailable(.camera){
+        //            if UIImagePickerController.availableCaptureModes(for: .rear) != nil{
+        //                self.imagePicker.allowsEditing = true
+        //                self.imagePicker.sourceType = .camera
+        //                self.imagePicker.cameraCaptureMode = .photo
+        //                self.present(self.imagePicker, animated: true, completion: nil)
+        //            }
+        //        }
     }
     
     //MARK: - System
@@ -130,6 +149,9 @@ class ViewController: UIViewController, ViewControllerDelegate{
             default:
                 controller = ExampleViewController(nibName: "ExampleViewController", bundle: nil)
                 break
+            }
+            if let example = controller as? ExampleViewController{
+                example.delegate = self
             }
             controller!.modalPresentationStyle = .fullScreen
             self.present(controller!, animated: true, completion: nil)

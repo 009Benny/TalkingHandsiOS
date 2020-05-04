@@ -11,6 +11,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "RegisterViewController.configTextFields():RegisterViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.emailTextField">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "TemaViewController.viewDidLoad():TemaViewController.swift">
          <PersistentStrings>
             <PersistentString

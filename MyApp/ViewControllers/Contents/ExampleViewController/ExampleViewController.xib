@@ -41,12 +41,28 @@
                                         <constraint firstAttribute="width" secondItem="SfF-CB-AxT" secondAttribute="height" multiplier="3760:1755" id="6wi-bZ-Pc8"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNN-Le-6WT">
+                                    <rect key="frame" x="374.5" y="7" width="31.5" height="31.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="jNN-Le-6WT" secondAttribute="height" multiplier="1:1" id="3Hq-tG-RXd"/>
+                                    </constraints>
+                                    <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <state key="normal" image="icon-camera">
+                                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnCamera:" destination="-1" eventType="touchUpInside" id="4Se-WI-hgW"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" name="color-base"/>
                             <constraints>
                                 <constraint firstItem="BId-R9-kPl" firstAttribute="centerY" secondItem="BBd-mm-0dn" secondAttribute="centerY" id="FK4-Ck-seM"/>
                                 <constraint firstItem="SfF-CB-AxT" firstAttribute="centerX" secondItem="BBd-mm-0dn" secondAttribute="centerX" id="ImW-dP-blc"/>
+                                <constraint firstAttribute="trailing" secondItem="jNN-Le-6WT" secondAttribute="trailing" constant="8" id="J0B-ki-k8K"/>
                                 <constraint firstItem="BId-R9-kPl" firstAttribute="height" secondItem="BBd-mm-0dn" secondAttribute="height" multiplier="0.9" id="Obo-UN-bYh"/>
+                                <constraint firstItem="jNN-Le-6WT" firstAttribute="centerY" secondItem="BBd-mm-0dn" secondAttribute="centerY" id="XwT-pG-nEt"/>
+                                <constraint firstItem="jNN-Le-6WT" firstAttribute="height" secondItem="BBd-mm-0dn" secondAttribute="height" multiplier="0.7" id="fA6-eS-eQd"/>
                                 <constraint firstAttribute="height" constant="45" id="n8N-xC-hQ2"/>
                                 <constraint firstItem="SfF-CB-AxT" firstAttribute="centerY" secondItem="BBd-mm-0dn" secondAttribute="centerY" id="owl-TN-5Va"/>
                                 <constraint firstItem="SfF-CB-AxT" firstAttribute="height" secondItem="BBd-mm-0dn" secondAttribute="height" multiplier="0.9" id="t1W-fQ-fcz"/>
@@ -182,6 +198,7 @@ Muchas lenguas de señas tienden a ser lenguas analíticas con poca morfologí
     </objects>
     <resources>
         <image name="btnplay" width="1024" height="1024"/>
+        <image name="icon-camera" width="512" height="512"/>
         <image name="left-arrow" width="512" height="512"/>
         <image name="logo" width="3760" height="1755"/>
         <image name="senales" width="1280" height="720"/>

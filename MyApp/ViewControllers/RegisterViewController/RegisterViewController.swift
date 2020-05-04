@@ -20,6 +20,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewContainer?.layer.cornerRadius = 10
+        self.configTextFields()
     }
     
     func configTextFields(){
@@ -39,6 +40,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     //MARK: - Button Actions

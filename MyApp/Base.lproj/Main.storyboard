@@ -105,17 +105,34 @@
                                             <action selector="btnRegisterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="udV-8M-nwf"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mf8-Rs-lVe">
+                                        <rect key="frame" x="83" y="479" width="248" height="45"/>
+                                        <color key="backgroundColor" name="color-secundary"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Hjm-py-Q6B"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Probar camara"/>
+                                        <connections>
+                                            <action selector="btnCamaraACtion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aMC-cX-M1A"/>
+                                            <action selector="btnRegisterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kZo-r4-Pkh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="S12-aS-Z3l" firstAttribute="centerX" secondItem="LX4-8x-aHs" secondAttribute="centerX" id="BKP-2H-a6h"/>
+                                    <constraint firstItem="Mf8-Rs-lVe" firstAttribute="top" secondItem="zuA-my-vwQ" secondAttribute="bottom" constant="10" id="EQH-Kb-MNj"/>
                                     <constraint firstItem="zuA-my-vwQ" firstAttribute="centerX" secondItem="LX4-8x-aHs" secondAttribute="centerX" id="MkW-Ax-mWc"/>
                                     <constraint firstItem="S12-aS-Z3l" firstAttribute="width" secondItem="LX4-8x-aHs" secondAttribute="width" multiplier="0.6" id="e70-tc-Pq2"/>
                                     <constraint firstItem="zuA-my-vwQ" firstAttribute="width" secondItem="LX4-8x-aHs" secondAttribute="width" multiplier="0.6" id="fmI-GJ-hkC"/>
                                     <constraint firstItem="S12-aS-Z3l" firstAttribute="centerY" secondItem="LX4-8x-aHs" secondAttribute="centerY" id="l0G-3P-eo2"/>
+                                    <constraint firstItem="Mf8-Rs-lVe" firstAttribute="width" secondItem="LX4-8x-aHs" secondAttribute="width" multiplier="0.6" id="n0R-1j-KZQ"/>
                                     <constraint firstItem="zuA-my-vwQ" firstAttribute="top" secondItem="S12-aS-Z3l" secondAttribute="bottom" constant="15" id="nbY-MK-GhB"/>
                                     <constraint firstItem="S12-aS-Z3l" firstAttribute="top" secondItem="mjb-ox-E4K" secondAttribute="bottom" constant="20" id="nxy-DB-9Ro"/>
                                     <constraint firstItem="mjb-ox-E4K" firstAttribute="centerX" secondItem="LX4-8x-aHs" secondAttribute="centerX" id="wly-Vi-RbA"/>
+                                    <constraint firstItem="Mf8-Rs-lVe" firstAttribute="centerX" secondItem="LX4-8x-aHs" secondAttribute="centerX" id="xz2-MS-93a"/>
                                 </constraints>
                             </view>
                         </subviews>
