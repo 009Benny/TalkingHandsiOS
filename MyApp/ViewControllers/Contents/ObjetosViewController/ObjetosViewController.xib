@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ObjetosViewController" customModule="Talking_Hands" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewYoutube" destination="wP7-6F-ddc" id="lzg-v1-PLX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3M-MD-QCe">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9lS-Ac-qri" userLabel="navigationView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gg3-uS-zNF">
+                                    <rect key="frame" x="15" y="2.5" width="40.5" height="40.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="gg3-uS-zNF" secondAttribute="height" multiplier="1:1" id="pJd-6Z-RVb"/>
+                                    </constraints>
+                                    <state key="normal" image="left-arrow"/>
+                                    <connections>
+                                        <action selector="btnBack:" destination="-1" eventType="touchUpInside" id="gLI-la-W2D"/>
+                                    </connections>
+                                </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="LWp-Jn-kds">
+                                    <rect key="frame" x="163.5" y="2.5" width="87" height="40.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="LWp-Jn-kds" secondAttribute="height" multiplier="3760:1755" id="WEa-Ko-rnB"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" name="color-base"/>
+                            <constraints>
+                                <constraint firstItem="LWp-Jn-kds" firstAttribute="centerX" secondItem="9lS-Ac-qri" secondAttribute="centerX" id="3An-JT-N52"/>
+                                <constraint firstItem="gg3-uS-zNF" firstAttribute="centerY" secondItem="9lS-Ac-qri" secondAttribute="centerY" id="GWm-A8-Syz"/>
+                                <constraint firstItem="LWp-Jn-kds" firstAttribute="height" secondItem="9lS-Ac-qri" secondAttribute="height" multiplier="0.9" id="TeS-Y6-eCQ"/>
+                                <constraint firstItem="LWp-Jn-kds" firstAttribute="centerY" secondItem="9lS-Ac-qri" secondAttribute="centerY" id="q0j-iw-adu"/>
+                                <constraint firstItem="gg3-uS-zNF" firstAttribute="leading" secondItem="9lS-Ac-qri" secondAttribute="leading" constant="15" id="rif-3B-cr8"/>
+                                <constraint firstItem="gg3-uS-zNF" firstAttribute="height" secondItem="9lS-Ac-qri" secondAttribute="height" multiplier="0.9" id="t9w-TA-540"/>
+                                <constraint firstAttribute="height" constant="45" id="tbI-BK-mq5"/>
+                            </constraints>
+                        </view>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfh-H3-dMH">
+                            <rect key="frame" x="0.0" y="45" width="414" height="773"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GtN-5H-75a">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1831.5"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube" translatesAutoresizingMaskIntoConstraints="NO" id="fem-Dr-BWt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="fem-Dr-BWt" secondAttribute="height" multiplier="8:4" id="X0Y-fx-lRW"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMf-0w-WPN">
+                                            <rect key="frame" x="182" y="78.5" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="FGm-eg-qxz"/>
+                                                <constraint firstAttribute="width" secondItem="uMf-0w-WPN" secondAttribute="height" multiplier="1:1" id="Mn6-dY-teB"/>
+                                            </constraints>
+                                            <state key="normal" image="btnplay"/>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wP7-6F-ddc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="wP7-6F-ddc" secondAttribute="height" multiplier="8:4" id="9NF-bG-Z32"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objetos de la casa" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5B-eq-rZC" userLabel="title">
+                                            <rect key="frame" x="20.5" y="217" width="373" height="36"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                            <color key="textColor" name="color-secundary"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9m-W0-O9k" userLabel="summary">
+                                            <rect key="frame" x="20.5" y="263" width="373" height="95.5"/>
+                                            <string key="text">Las lenguas de signos son lenguas naturales de producción gestual y percepción visual que tienen estructuras gramaticales perfectamente definidas y distintas de las lenguas orales con las que cohabitan.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDy-4r-MaA" userLabel="content-1">
+                                            <rect key="frame" x="20.5" y="378.5" width="373" height="376"/>
+                                            <string key="text">¿Qué es la LSM? La Lengua de Señas Mexicana (LSM) es una lengua como cualquier otro idioma, ya que tiene sus propias reglas y su propia gramática. Esta es la lengua que utilizan las personas sordas gracias a la cual, los sordos pueden establecer un canal de comunicación con su entorno social, sea este conformado por otros sordos o por cualquier persona que conozca la lengua de señas empleada. Mientras que la lengua oral se basa en la comunicación a través de un canal vocal-auditivo, la lengua de señas lo hace por un canal gesto-viso-espacial.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="senales" translatesAutoresizingMaskIntoConstraints="NO" id="LUk-Cl-0WJ">
+                                            <rect key="frame" x="10.5" y="774.5" width="393" height="210"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="LUk-Cl-0WJ" secondAttribute="height" multiplier="15:8" id="ajz-X5-XQi"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTd-mF-9tH" userLabel="content-1">
+                                            <rect key="frame" x="20.5" y="1004.5" width="373" height="777"/>
+                                            <string key="text">¿Qué es la LSM? La Lengua de Señas Mexicana (LSM) es una lengua como cualquier otro idioma, ya que tiene sus propias reglas y su propia gramática. Esta es la lengua que utilizan las personas sordas gracias a la cual, los sordos pueden establecer un canal de comunicación con su entorno social, sea este conformado por otros sordos o por cualquier persona que conozca la lengua de señas empleada. Mientras que la lengua oral se basa en la comunicación a través de un canal vocal-auditivo, la lengua de señas lo hace por un canal gesto-viso-espacial.
+El 26 de septiembre es el día internacional del déficit auditivo a nivel mundial
+Muchas lenguas de señas tienden a ser lenguas analíticas con poca morfología. Esto, sin embargo, puede ser más una consecuencia del origen histórico de las mismas que una característica necesaria o preferente de las lenguas de señas. En la mayoría de lenguas de señas, por ejemplo, los procesos morfológicos son más usados en los procesos de formación de palabras: derivación y composición y son evidentes en la estructura de buena parte del léxico.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="wP7-6F-ddc" secondAttribute="trailing" id="17y-fj-1xb"/>
+                                        <constraint firstItem="wP7-6F-ddc" firstAttribute="top" secondItem="GtN-5H-75a" secondAttribute="top" id="238-nM-ObT"/>
+                                        <constraint firstItem="LUk-Cl-0WJ" firstAttribute="centerX" secondItem="GtN-5H-75a" secondAttribute="centerX" id="65m-x3-3sS"/>
+                                        <constraint firstItem="N9m-W0-O9k" firstAttribute="centerX" secondItem="GtN-5H-75a" secondAttribute="centerX" id="88z-Tx-Ore"/>
+                                        <constraint firstItem="gDy-4r-MaA" firstAttribute="width" secondItem="GtN-5H-75a" secondAttribute="width" multiplier="0.9" id="F42-SR-X1I"/>
+                                        <constraint firstItem="U5B-eq-rZC" firstAttribute="centerX" secondItem="GtN-5H-75a" secondAttribute="centerX" id="Gvu-dO-aQl"/>
+                                        <constraint firstItem="LUk-Cl-0WJ" firstAttribute="width" secondItem="GtN-5H-75a" secondAttribute="width" multiplier="0.95" id="LON-df-2rg"/>
+                                        <constraint firstItem="gDy-4r-MaA" firstAttribute="centerX" secondItem="GtN-5H-75a" secondAttribute="centerX" id="OPl-0b-E5V"/>
+                                        <constraint firstItem="pTd-mF-9tH" firstAttribute="centerX" secondItem="GtN-5H-75a" secondAttribute="centerX" id="RfY-oK-3hj"/>
+                                        <constraint firstItem="uMf-0w-WPN" firstAttribute="centerX" secondItem="fem-Dr-BWt" secondAttribute="centerX" id="S3f-05-W0K"/>
+                                        <constraint firstItem="N9m-W0-O9k" firstAttribute="top" secondItem="U5B-eq-rZC" secondAttribute="bottom" constant="10" id="TOE-JB-VPH"/>
+                                        <constraint firstItem="wP7-6F-ddc" firstAttribute="leading" secondItem="GtN-5H-75a" secondAttribute="leading" id="TUj-3V-sA9"/>
+                                        <constraint firstItem="uMf-0w-WPN" firstAttribute="centerY" secondItem="fem-Dr-BWt" secondAttribute="centerY" id="ToP-Ga-r6B"/>
+                                        <constraint firstAttribute="bottom" secondItem="pTd-mF-9tH" secondAttribute="bottom" constant="50" id="bg9-Y7-elh"/>
+                                        <constraint firstItem="N9m-W0-O9k" firstAttribute="width" secondItem="GtN-5H-75a" secondAttribute="width" multiplier="0.9" id="eoc-En-Zek"/>
+                                        <constraint firstItem="pTd-mF-9tH" firstAttribute="width" secondItem="GtN-5H-75a" secondAttribute="width" multiplier="0.900966" id="gQ8-jx-dNt"/>
+                                        <constraint firstItem="U5B-eq-rZC" firstAttribute="width" secondItem="GtN-5H-75a" secondAttribute="width" multiplier="0.9" id="hYL-n9-tWt"/>
+                                        <constraint firstAttribute="trailing" secondItem="fem-Dr-BWt" secondAttribute="trailing" id="mpd-qk-ERr"/>
+                                        <constraint firstItem="LUk-Cl-0WJ" firstAttribute="top" secondItem="gDy-4r-MaA" secondAttribute="bottom" constant="20" id="pT3-eH-vRX"/>
+                                        <constraint firstItem="fem-Dr-BWt" firstAttribute="top" secondItem="GtN-5H-75a" secondAttribute="top" id="qS1-2Z-DJy"/>
+                                        <constraint firstItem="gDy-4r-MaA" firstAttribute="top" secondItem="N9m-W0-O9k" secondAttribute="bottom" constant="20" id="tsS-Cg-xlB"/>
+                                        <constraint firstItem="U5B-eq-rZC" firstAttribute="top" secondItem="fem-Dr-BWt" secondAttribute="bottom" constant="10" id="u7I-PE-U6T"/>
+                                        <constraint firstItem="fem-Dr-BWt" firstAttribute="leading" secondItem="GtN-5H-75a" secondAttribute="leading" id="xC7-JT-a92"/>
+                                        <constraint firstItem="pTd-mF-9tH" firstAttribute="top" secondItem="LUk-Cl-0WJ" secondAttribute="bottom" constant="20" id="zed-Z0-Vaf"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="GtN-5H-75a" secondAttribute="bottom" id="1nN-b6-cMp"/>
+                                <constraint firstItem="GtN-5H-75a" firstAttribute="top" secondItem="kfh-H3-dMH" secondAttribute="top" id="PMS-kV-pSV"/>
+                                <constraint firstItem="GtN-5H-75a" firstAttribute="leading" secondItem="xO2-eh-F7v" secondAttribute="leading" id="glC-dS-JC9"/>
+                                <constraint firstItem="GtN-5H-75a" firstAttribute="leading" secondItem="kfh-H3-dMH" secondAttribute="leading" id="ihe-fv-Apn"/>
+                                <constraint firstAttribute="trailing" secondItem="GtN-5H-75a" secondAttribute="trailing" id="mah-ok-vdW"/>
+                                <constraint firstItem="xO2-eh-F7v" firstAttribute="trailing" secondItem="GtN-5H-75a" secondAttribute="trailing" id="yxY-AG-8XD"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="dsy-XC-ye3"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="xO2-eh-F7v"/>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="kfh-H3-dMH" firstAttribute="top" secondItem="9lS-Ac-qri" secondAttribute="bottom" id="3eK-YU-w3S"/>
+                        <constraint firstAttribute="trailing" secondItem="kfh-H3-dMH" secondAttribute="trailing" id="OeI-CM-WPO"/>
+                        <constraint firstItem="9lS-Ac-qri" firstAttribute="top" secondItem="Q3M-MD-QCe" secondAttribute="top" id="Rv3-X8-vwx"/>
+                        <constraint firstAttribute="bottom" secondItem="kfh-H3-dMH" secondAttribute="bottom" id="W6U-q9-w6F"/>
+                        <constraint firstAttribute="trailing" secondItem="9lS-Ac-qri" secondAttribute="trailing" id="YVU-N4-CLZ"/>
+                        <constraint firstItem="kfh-H3-dMH" firstAttribute="leading" secondItem="Q3M-MD-QCe" secondAttribute="leading" id="cgL-jT-Xlj"/>
+                        <constraint firstItem="9lS-Ac-qri" firstAttribute="leading" secondItem="Q3M-MD-QCe" secondAttribute="leading" id="dKV-5V-rga"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="color-base"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="Q3M-MD-QCe" secondAttribute="top" id="giV-DZ-lZc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Q3M-MD-QCe" secondAttribute="bottom" id="jQu-6A-JcA"/>
+                <constraint firstItem="Q3M-MD-QCe" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="qsW-0l-Uye"/>
+                <constraint firstItem="Q3M-MD-QCe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="t6L-vr-iPx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="81"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btnplay" width="1024" height="1024"/>
+        <image name="left-arrow" width="512" height="512"/>
+        <image name="logo" width="3760" height="1755"/>
+        <image name="senales" width="1280" height="720"/>
+        <image name="youtube" width="480" height="360"/>
+        <namedColor name="color-base">
+            <color red="0.20900000631809235" green="0.67100000381469727" blue="0.62599998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color-secundary">
+            <color red="0.9649999737739563" green="0.74400001764297485" blue="0.46500000357627869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

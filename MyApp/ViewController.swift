@@ -50,6 +50,17 @@ class ViewController: UIViewController, ViewControllerDelegate{
         self.present(controller, animated: true, completion: nil)
     }
     
+    @IBAction func btnBackAction(_ sender: Any) {
+        if self.children.count > 0{
+            for item in self.children {
+                if let controller = item as? TemaViewController{
+                    controller.view.removeFromSuperview()
+                    controller.removeFromParent()
+                }
+            }
+        }
+    }
+    
     //MARK: - System
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
@@ -89,9 +100,41 @@ class ViewController: UIViewController, ViewControllerDelegate{
     }
     
     func showContent(withItem item:MenuItem){
-        let controller = ExampleViewController(nibName: "ExampleViewController", bundle: nil)
-        controller.modalPresentationStyle = .fullScreen
-        self.present(controller, animated: true, completion: nil)
+        if item.modules?.count ?? 0 > 0{
+            let controller = TemaViewController(nibName: "TemaViewController", bundle: nil, withArray: item.modules! as! [MenuItem])
+            controller.view.frame = self.viewContent?.frame ?? self.view.frame
+            controller.delegate = self
+            self.btnReturn?.isHidden = false
+            self.btnReturn?.isEnabled = true
+            self.addChild(controller)
+            self.view.addSubview(controller.view)
+        }else{
+            let id:Int = item.id ?? 0
+            var controller:UIViewController?
+            switch id {
+            case 10:
+                controller = ExampleViewController(nibName: "ExampleViewController", bundle: nil)
+                break
+            case 11:
+                controller = ObjetosViewController(nibName: "ObjetosViewController", bundle: nil)
+                break
+            case 12:
+                controller = CaracteristicasViewController(nibName: "CaracteristicasViewController", bundle: nil)
+                break
+            case 13:
+                controller = EmocionesViewController(nibName: "EmocionesViewController", bundle: nil)
+                break
+            case 14:
+                controller = AccionesCotidianasViewController(nibName: "AccionesCotidianasViewController", bundle: nil)
+                break
+            default:
+                controller = ExampleViewController(nibName: "ExampleViewController", bundle: nil)
+                break
+            }
+            controller!.modalPresentationStyle = .fullScreen
+            self.present(controller!, animated: true, completion: nil)
+        }
+        
     }
     
 }

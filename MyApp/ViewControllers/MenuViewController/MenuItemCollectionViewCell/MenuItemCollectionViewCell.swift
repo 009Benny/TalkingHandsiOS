@@ -14,9 +14,11 @@ class MenuItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblTitle: UILabel?
     @IBOutlet weak var lblSection: UILabel?
     @IBOutlet weak var viewContainer: UIView?
+    @IBOutlet weak var viewEnabled: UIView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.viewEnabled?.layer.cornerRadius = 20
         self.viewContainer?.layer.cornerRadius = 20
         self.viewContainer?.layer.masksToBounds = true
         self.layer.shadowColor = UIColor.gray.cgColor
@@ -30,6 +32,7 @@ class MenuItemCollectionViewCell: UICollectionViewCell {
         self.lblTitle?.text = item.title
         self.lblSection?.text = item.section
         self.imgModule?.image = item.image
+        self.viewEnabled?.isHidden = item.status ?? false
     }
     
 

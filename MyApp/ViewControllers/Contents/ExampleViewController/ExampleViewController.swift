@@ -12,23 +12,30 @@ import youtube_ios_player_helper
 class ExampleViewController: UIViewController, YTPlayerViewDelegate {
     @IBOutlet weak var viewYoutube: UIView?
     var ytPlayer:YTPlayerView?
+    var youtubeID:String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.youtubeID = "SXNJCma9MEc"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.layoutIfNeeded()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.view.layoutIfNeeded()
         self.configYouTube()
     }
     
     func configYouTube(){
         if self.viewYoutube != nil{
+            self.view.layoutIfNeeded()
             self.ytPlayer = YTPlayerView(frame: self.viewYoutube!.bounds)
-            self.ytPlayer?.load(withVideoId: "SXNJCma9MEc&t=1s", playerVars: [
-                "playsinline":1,
-                "modestbranding":1,
-                "rel":0,
-                "showinfo":0,
-                "autoplay":1,
-                "origin":"http://www.youtube.com/"
-            ])
+            self.ytPlayer?.load(withVideoId: self.youtubeID ?? "")
             self.viewYoutube!.addSubview(self.ytPlayer!)
             self.ytPlayer!.backgroundColor = .black
             self.ytPlayer!.isOpaque = false
@@ -73,6 +80,11 @@ class ExampleViewController: UIViewController, YTPlayerViewDelegate {
     
     func playerView(_ playerView: YTPlayerView, receivedError error: YTPlayerError) {
         print("VIDEO: error \(error.hashValue)")
+    }
+    
+    //MARK: - System
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
     
 }

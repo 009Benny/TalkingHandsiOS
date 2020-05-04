@@ -52,7 +52,9 @@ class MenuViewController: UIViewController, UICollectionViewDelegateFlowLayout, 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let item = self.arrayMenu?[indexPath.row]{
-            self.delegate?.showContent(withItem: item)
+            if item.status == true{
+                self.delegate?.showContent(withItem: item)
+            }
         }
     }
     

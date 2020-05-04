@@ -8,42 +8,42 @@
             {
                 "id":"10",
                 "title":"El abc en lenguas de señas",
-                "section":"Modulo 2",
-                "image":"portada-2",
+                "section":"Modulo 1",
+                "image":"abc-lenguas",
                 "modules":[],
-                "status":"false"
+                "status":"true"
             },
             {
                 "id":"11",
-                "title":"Necesidades y acciones",
-                "section":"Modulo 2",
-                "image":"portada-2",
+                "title":"Objetos de la casa",
+                "section":"Modulo 1",
+                "image":"objetos-casa",
                 "modules":[],
-                "status":"false"
+                "status":"true"
             },
             {
                 "id":"12",
-                "title":"Necesidades y acciones",
-                "section":"Modulo 2",
-                "image":"portada-2",
+                "title":"Descripciones fisicas",
+                "section":"Modulo 1",
+                "image":"cuerpo",
                 "modules":[],
-                "status":"false"
+                "status":"true"
             },
             {
                 "id":"13",
-                "title":"Necesidades y acciones",
-                "section":"Modulo 2",
-                "image":"portada-2",
+                "title":"Caracteristicas emocionales",
+                "section":"Modulo 1",
+                "image":"emociones",
                 "modules":[],
-                "status":"false"
+                "status":"true"
             },
             {
                 "id":"14",
                 "title":"Necesidades y acciones",
-                "section":"Modulo 2",
-                "image":"portada-2",
+                "section":"Modulo 1",
+                "image":"acciones",
                 "modules":[],
-                "status":"false"
+                "status":"true"
             },
         ],
         "status":"true"

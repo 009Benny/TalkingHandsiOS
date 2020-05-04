@@ -17,15 +17,26 @@ class MenuItem: NSObject {
     var status:Bool?
     
     init(withDictionary dictionary:NSDictionary){
-        self.id = dictionary.object(forKey: "id") as? Int ?? 0
+        let id = dictionary.object(forKey: "id") as? String ?? ""
+        self.id = Int(id) ?? 0
         self.title = dictionary.object(forKey: "title") as? String ?? ""
         self.section = dictionary.object(forKey: "section") as? String ?? ""
-        self.status = dictionary.object(forKey: "status") as? Bool ?? false
+        let status = dictionary.object(forKey: "status") as? String ?? ""
+        self.status = status == "true"
         let image = dictionary.object(forKey: "image") as? String ?? ""
         if image != "" {
             self.image = UIImage(named: image)
         }
-        self.modules = dictionary.object(forKey: "modules") as? NSArray ?? []
+        if let modules = dictionary.object(forKey: "modules") as? NSArray{
+            let aux = NSMutableArray()
+            for item in modules {
+                if let dictionary = item as? NSDictionary{
+                    aux.add(MenuItem(withDictionary: dictionary))
+                }
+            }
+            self.modules = NSArray(array: aux)
+        }
+        
     }
 
 }
