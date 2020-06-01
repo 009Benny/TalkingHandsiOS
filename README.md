@@ -2,10 +2,10 @@
 app de comuniciacion con manos
 
 <b>
-Requerimientos:&nbsp;
-  - MacOS Mojave o superior&nbsp;
-  - Dispositivo iOS o simulador device (ios 13.2 o mayor)&nbsp;
-  - XCode version 11.0 o mayor&nbsp;
+Requerimientos:/
+  - MacOS Mojave o superior/
+  - Dispositivo iOS o simulador device (ios 13.2 o mayor)/
+  - XCode version 11.0 o mayor/
 </b>
 &nbsp;
 <b>
